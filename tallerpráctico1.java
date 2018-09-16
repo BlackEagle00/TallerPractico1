@@ -1,10 +1,10 @@
 import java.io.*;
 /**
  * 
- * @author Andrés Guillermo Bonilla Olarte
+ * @author AndrÃ©s Guillermo Bonilla Olarte
  *
  */
-public class tallerpráctico1 
+public class ejercicio4
 
 {
 	/**
@@ -26,11 +26,11 @@ public class tallerpráctico1
 			} 
 			if (word.equals(word1)) 
 			{ 
-				bw.write("La palabra es un palíndromo");  
+				bw.write("La palabra es un palÃ­ndromo");  
 			} 
 			else
 			{
-				bw.write("La palabra no es palíndromo");
+				bw.write("La palabra no es palÃ­ndromo");
 			}
 			bw.flush();
         }
