@@ -18,7 +18,7 @@ public class ejercicio4
         try
         {
 			String word, word1 = ""; 
-			System.out.println("Ingrese una palabra"); 
+			bw.write("Ingrese una palabra"); 
 			word = br.readLine();
 			for (int i = word.length() - 1; i >= 0; i--) 
 			{ 
