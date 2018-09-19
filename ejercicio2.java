@@ -1,5 +1,5 @@
 import java.io.*;
-public class Ejercicio 
+public class ejercicio2 
 {
     public static int factorial(int x)
     {
@@ -53,8 +53,9 @@ public class Ejercicio
         {  
             input = Integer.parseInt(br.readLine());
             bw.write("\n El resultado del factorial de " + input + " es " + factorial(input));
-            bw.write("\n El resultado la serie de Fibonacci " + input + " es " + fibonacci(input));
-            bw.write("\n El triángulo de Pascal " + input + " es " + pascal(input));
+            bw.newLine();
+            bw.write("\n La serie de Fibonacci es " + input + " es " + ((i+1)+" : "+fibonacci(input)));
+            bw.newLine();
         } 
     bw.flush(); //libera información
     }
@@ -63,4 +64,4 @@ public class Ejercicio
         ex.printStackTrace();
     }
 }
-}    
+}  
