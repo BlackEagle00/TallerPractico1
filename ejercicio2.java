@@ -1,4 +1,9 @@
 import java.io.*;
+/**
+ * 
+ * @author Andrés Guillermo Bonilla Olarte
+ *
+ */
 public class ejercicio2 
 {
     public static int factorial(int x)
@@ -8,7 +13,11 @@ public class ejercicio2
         else
             return 1;
     }       
-            
+    /**
+     *         
+     * @param x
+     * @return
+     */
     public static int fibonacci (int x)
     {
       if (x == 0)
@@ -19,26 +28,27 @@ public class ejercicio2
           else
               return fibonacci (x - 1) + fibonacci (x - 2);
     } 
-    
-    public int pascal(int n, int k)
+    /**
+     * 
+     * @param n
+     * @param k
+     * @return
+     */
+    public static long pascal(int n, int k)
 	{
-		return 0;
-    }
-    
-    public String print_pascal()
-	{
-		String pascal_matrix = "";
-		
-		for(int i = 0; i < 10; i++)
+		if (k == 0 || k == n )
 		{
-			for(int j = 0; j <= i; j++)
-				pascal_matrix += pascal(i, j) + "\t";
-			
-			pascal_matrix += "\n";
+			return 1;
 		}
-		
-		return pascal_matrix;
-}
+		else 
+		{
+			return pascal(n-1, k-1) + pascal(n-1, k);
+		}
+    }
+    /**
+     * 
+     * @return
+     */
     public static void main(String[] args) 
     {
         BufferedReader br = new BufferedReader ( new InputStreamReader ( System.in ));
@@ -48,14 +58,24 @@ public class ejercicio2
         int interations = 10;
         
         try
-        {    
+        {   
+        	bw.write("Triángulo de Pascal ");
+        	for (int  i = 0; i < 10; i++)
+        	{
+        		for (int j = 0; j <= i; j++) 
+        		{
+        			bw.write((pascal(i,j))+" ");
+        			bw.newLine();
+        		}
+        	}
         for (int i = 0; i < interations; i++)
         {  
             input = Integer.parseInt(br.readLine());
             bw.write("\n El resultado del factorial de " + input + " es " + factorial(input));
             bw.newLine();
-            bw.write("\n La serie de Fibonacci es " + input + " es " + ((i+1)+" : "+fibonacci(input)));
+            bw.write("\n La serie de Fibonacci " + input + " es " + ((i+1)+" : "+fibonacci(input)));
             bw.newLine();
+            
         } 
     bw.flush(); //libera información
     }
@@ -64,4 +84,4 @@ public class ejercicio2
         ex.printStackTrace();
     }
 }
-}  
+} 
