@@ -81,7 +81,7 @@ public static int potencia (int n1, int n2)
         	bw.flush(); 
         	opc = Integer.parseInt(br.readLine());
         	bw.flush(); 
-        	if (opc != 0 && opc <= 7) 
+        	if (opc < 8) 
         	{
         		bw.write("Ingrese los números a operar");
             	bw.newLine();
