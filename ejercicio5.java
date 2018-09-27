@@ -14,7 +14,7 @@ public class ejercicio5
    
     public static void combinaciones(String first,String string) 
     {
-    	if(cadena.length()==2)
+    	if(string.length()==2)
     	{
     		counter=counter+2;
     		System.out.println(first+string.charAt(1)+""+string.charAt(0));
@@ -39,7 +39,7 @@ public class ejercicio5
     {
     	if(i==0)
     	{
-    		return cadena.substring(i+1,string.length());
+    		return string.substring(i+1,string.length());
     	}
     	else
     	{
