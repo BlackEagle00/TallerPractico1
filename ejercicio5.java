@@ -12,19 +12,19 @@ public class ejercicio5
 	 * @throws IOException 
 	 */
    
-    public static void combinaciones(String primero,String cadena) 
+    public static void combinaciones(String first,String string) 
     {
     	if(cadena.length()==2)
     	{
     		counter=counter+2;
-    		System.out.println(primero+cadena.charAt(1)+""+cadena.charAt(0));
-    		System.out.println(primero+cadena.charAt(0)+""+cadena.charAt(1));
+    		System.out.println(first+string.charAt(1)+""+string.charAt(0));
+    		System.out.println(first+string.charAt(0)+""+string.charAt(1));
     	}
     	else
       {
-    		for (int i=0;i<cadena.length();i++) 
+    		for (int i=0;i<string.length();i++) 
         {
-    		   		combinaciones(primero+cadena.charAt(i),quitarLetra(cadena,i));
+    		   		combinaciones(first+string.charAt(i),quitarLetra(string,i));
     		}
     	}
     }
@@ -35,21 +35,21 @@ public class ejercicio5
    * @return
    */
    
-    public static String quitarLetra(String cadena,int i)
+    public static String quitarLetra(String string,int i)
     {
     	if(i==0)
     	{
-    		return cadena.substring(i+1,cadena.length());
+    		return cadena.substring(i+1,string.length());
     	}
     	else
     	{
-    		if(i==cadena.length())
+    		if(i==string.length())
     		{
-    			return cadena.substring(0,cadena.length()-1);
+    			return string.substring(0,string.length()-1);
     		}
     		else
     		{
-    			return cadena.substring(0,i)+cadena.substring(i+1,cadena.length());
+    			return string.substring(0,i)+string.substring(i+1,string.length());
     		}
     	}
     }
@@ -59,9 +59,9 @@ public class ejercicio5
  * @throws IOException 
    */
     public static void main(String args[]) {
-    	String cadena="abcde";
-    	System.out.println("combinaciones de :"+cadena);
-    	combinaciones("",cadena);
-    	System.out.println("total:"+count);
+    	String string="abcde";
+    	System.out.println("combinaciones de :"+string);
+    	combinaciones("",string);
+    	System.out.println("total:"+counter);
     }
 }
