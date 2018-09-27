@@ -36,7 +36,7 @@ public static int potencia (int n1, int n2)
         res = 1;
     }
     else{
-        res = n1 * potencia(n1, n2 - 1);
+        res = multiplicacion + (potencia(n1, n2 - 1));
     }      
     return res;
 }
