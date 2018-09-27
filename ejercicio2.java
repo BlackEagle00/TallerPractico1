@@ -4,7 +4,7 @@ import java.io.*;
  * @author Andrés Guillermo Bonilla Olarte
  *
  */
-public class ejercicio
+public class ejercicio2
 {
     public static int factorial(int x)
     {
@@ -88,4 +88,4 @@ public class ejercicio
         ex.printStackTrace();
     }
 }
-}    
+}
