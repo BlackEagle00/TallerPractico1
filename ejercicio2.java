@@ -4,7 +4,7 @@ import java.io.*;
  * @author Andrés Guillermo Bonilla Olarte
  *
  */
-public class ejercicio2 
+public class ejercicio
 {
     public static int factorial(int x)
     {
@@ -55,6 +55,7 @@ public class ejercicio2
         BufferedWriter bw = new BufferedWriter ( new OutputStreamWriter ( System.out ));
         
         int input;
+        
         int interations = 10;
         
         try
@@ -65,9 +66,12 @@ public class ejercicio2
         		for (int j = 0; j <= i; j++) 
         		{
         			bw.write((pascal(i,j))+" ");
-        			bw.newLine();
+        			bw.flush();
         		}
+        		bw.newLine();
         	}
+        	bw.newLine();
+        	
         for (int i = 0; i < interations; i++)
         {  
             input = Integer.parseInt(br.readLine());
@@ -84,4 +88,4 @@ public class ejercicio2
         ex.printStackTrace();
     }
 }
-} 
+}    
