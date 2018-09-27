@@ -24,7 +24,7 @@ public class ejercicio5
       {
     		for (int i=0;i<string.length();i++) 
         {
-    		   		combinaciones(first+string.charAt(i),quitarLetra(string,i));
+    		   		combinaciones(first+string.charAt(i),remchar(string,i));
     		}
     	}
     }
@@ -35,7 +35,7 @@ public class ejercicio5
    * @return
    */
    
-    public static String quitarLetra(String string,int i)
+    public static String remchar(String string,int i)
     {
     	if(i==0)
     	{
