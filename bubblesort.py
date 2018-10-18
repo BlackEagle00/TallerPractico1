@@ -2,6 +2,11 @@ from random import randint
 
 def bubble_sort(a):
     for i in range (len (a) - 1 ):
+from random import randint
+from lib2to3.pgen2.token import GREATER
+
+def bubble_sort(a):
+    for i in range (len (a) - 1 ):
         swapped = False
         for j in range (len (a) - 1):
             if a [j] > a [j + 1]:
@@ -23,19 +28,30 @@ def insertion_sort(a):
         a[index_hole] = x    
 
 def quick_sort(a):
-    if len(a) == 1:
+    if len(a) <= 1:
         return a
     else:
         pivot = a[0]
-        for i in range (len(a) ):
+        less_subarray = []
+        greater_subarray = []
+        for i in range (1, len(a)):
             if a[i] < pivot:
-                less_subarray = a[i]
+                less_subarray.append(a[i])
             else:
-                greater_subarray = a[i]    
-            return quick_sort(less_subarray) + pivot + quick_sort(greater_subarray)           
+                greater_subarray.append(a[i])   
+                 
+        
+            
+        result = []
+        result.extend(quick_sort(less_subarray))
+        result.append(pivot)
+        result.extend(quick_sort(greater_subarray))
+        
+    
+    return result      
     
 
-a = [randint (1, 1000) for i in range (10)]
+a = [randint (1, 1000) for i in range (0000)]
 print (a)
-quick_sort(a)
-print (a)
+a = quick_sort(a)
+print (a)   
