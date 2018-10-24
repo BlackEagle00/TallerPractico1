@@ -53,5 +53,5 @@ def quick_sort(a):
 
 a = [randint (1, 1000) for i in range (0000)]
 print (a)
-a = quick_sort(a)
+a = quick_sort(a)  //cambiar el nombre, para llamar a cada función
 print (a)   
