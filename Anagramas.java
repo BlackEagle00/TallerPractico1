@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class ejercicio5
+public class Anagramas
 /**
  *
  * @author Andrés Guillermo Bonilla Olarte
@@ -64,14 +64,16 @@ public class ejercicio5
    * @param args
  * @throws IOException 
    */
-    public static void main(String args[]) throws IOException 
+    public static void main(String []args) throws IOException 
     {
-    	String string="abcde";
-    	bw.write("combinaciones de :"+string);
+    	bw.write("Ingrese cadena\n");
+    	bw.flush();
+    	String string= br.readLine();
+    	bw.write("Combinaciones de :"+string);
     	bw.newLine();
     	combinaciones("\n"+"",string);
     	bw.newLine();
-    	bw.write("total:"+counter);
+    	bw.write("\nTotal combinaciones posibles: "+counter);
     	bw.newLine();
     	bw.flush();
     }
