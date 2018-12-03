@@ -5,7 +5,7 @@ import java.io.*;
  * @author Andrés Guillermo Bonilla Olarte
  */
 
-public class ejercicio3 
+public class SubCadenas
 {
         static BufferedReader br = new BufferedReader (new InputStreamReader (System.in));       
         static BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (System.out)); 
@@ -62,6 +62,8 @@ public class ejercicio3
         String input;
         try
         {
+        	bw.write("Ingrese cadena de caracteres\n");
+        	bw.flush();
             input = br.readLine();
             all_substrings(input);
         }
