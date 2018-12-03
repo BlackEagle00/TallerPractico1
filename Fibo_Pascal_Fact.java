@@ -4,7 +4,7 @@ import java.io.*;
  * @author Andrés Guillermo Bonilla Olarte
  *
  */
-public class ejercicio2
+public class Fibo_Pascal_Fact
 {
     public static int factorial(int x)
     {
@@ -60,7 +60,7 @@ public class ejercicio2
         
         try
         {   
-        	bw.write("Triángulo de Pascal ");
+        	bw.write("Triángulo de Pascal \n");
         	for (int  i = 0; i < 10; i++)
         	{
         		for (int j = 0; j <= i; j++) 
@@ -71,6 +71,7 @@ public class ejercicio2
         		bw.newLine();
         	}
         	bw.newLine();
+        	bw.flush();
         	
         for (int i = 0; i < interations; i++)
         {  
@@ -81,6 +82,7 @@ public class ejercicio2
             bw.newLine();
             
         } 
+        
     bw.flush(); //libera información
     }
     catch(Exception ex)
