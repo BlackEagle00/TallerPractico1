@@ -4,7 +4,7 @@ import java.io.*;
  * @author Andrés Guillermo Bonilla Olarte
  *
  */
-public class ejercicio4
+public class Palindromo
 
 {
 	/**
