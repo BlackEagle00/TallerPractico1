@@ -1,10 +1,13 @@
 import java.io.*;
 /**
+* This program is a calculator with 8 different mah operations
+ * This calculator is free software: you can redistribute it and/or modify it under the terms of the 
+ * GNU General Public License as published by the Free Software Foundation, version 3
  * 
- * @author Andrés Guillermo Bonilla Olarte
- *
+ * @author Andrés_Bonilla
+ * 
  */
-public class ejercicio1
+public class Calculadora
 {
 	/**
 	 * 
@@ -32,11 +35,12 @@ public static int multiplicacion(int n1, int n2)
 public static int potencia (int n1, int n2)
 {
 	int res=0;
-	if(n2 == 0){
+	if(n2 == 0)
+	{
         res = 1;
     }
     else{
-        res = multiplicacion + (potencia(n1, n2 - 1));
+        res = multiplicacion (n1, potencia(n1, n2 - 1));
     }      
     return res;
 }
@@ -50,10 +54,15 @@ public static int potencia (int n1, int n2)
         BufferedWriter bw = new BufferedWriter ( new OutputStreamWriter ( System.out ));
         int n1, n2, s, r, d, mod;
 		double ra;
-        int opc;
+        int opc = 1;
         try
-        {    
-        	bw.flush(); 
+        {   
+		
+	    
+	    while(opc!=0) 
+	    {
+	    	
+	    	bw.flush(); 
         	bw.write("Bienvenido a la calculadora, ingrese la operación a realizar");
         	bw.newLine();
         	bw.flush(); 
@@ -81,11 +90,33 @@ public static int potencia (int n1, int n2)
         	bw.flush(); 
         	opc = Integer.parseInt(br.readLine());
         	bw.flush(); 
+		
+		if (opc == 0) 
+		{
+			
+			bw.write("Gracias por usar la calculadora");
+			bw.flush();
+			break;
+			
+		} 
+		
+		if (opc == 6) 
+		{
+			bw.write("Ingrese el número a operar\n");
+			bw.flush();
+			int num = Integer.parseInt(br.readLine());
+			bw.write("Resultado de la raíz cuadrada: "+ Math.sqrt(num));
+    		bw.flush();
+    		bw.newLine();
+    		
+		}
+		
+        	
         	if (opc < 8) 
         	{
         		bw.write("Ingrese los números a operar");
-            	bw.newLine();
-            	bw.flush(); 
+            	bw.newLine(); 
+            	bw.flush();
             	bw.write("Número 1");
             	n1 = Integer.parseInt(br.readLine());
             	bw.newLine();
@@ -125,11 +156,8 @@ public static int potencia (int n1, int n2)
             		bw.flush(); 
             		break;
             	case 6:
-            		ra = Math.sqrt(n1);
-            		bw.write("Resultado de la raíz cuadrada: "+ra);
-            		bw.newLine();
-            		bw.flush(); 
             		break;
+            		
             	case 7:
             		mod = n1 % n2;
             		bw.write("Resultado del módulo/residuo: "+mod);
@@ -140,9 +168,10 @@ public static int potencia (int n1, int n2)
         	}
         	bw.flush(); 
         }
+        }
         catch(Exception e)
         {
         	e.printStackTrace();
         }
     }
-}    
+} 
